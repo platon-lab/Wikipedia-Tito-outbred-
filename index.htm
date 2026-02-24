@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вікіпедія: Тіто (собака)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основні налаштування */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f6f6f6;
+            color: #202124;
+            scroll-behavior: smooth;
+        }
+
+        /* Анімація появи */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Стилі заголовка */
+        .wiki-header {
+            border-bottom: 1px solid #a2a9b1;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        .wiki-header h1 {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-weight: 400;
+            font-size: 2.5em;
+            margin: 0;
+            color: #000;
+        }
+
+        .wiki-nav {
+            font-size: 13px;
+            color: #54595d;
+            margin-bottom: 15px;
+        }
+
+        /* Контент */
+        .wiki-content {
+            display: flex;
+            gap: 30px;
+            line-height: 1.7;
+        }
+
+        .wiki-text {
+            flex: 1;
+            font-size: 16px;
+        }
+
+        /* Покращений інфобокс */
+        .infobox {
+            width: 300px;
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 15px;
+            font-size: 0.85em;
+            float: right;
+            border-radius: 2px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .infobox-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            background-color: #eaecf0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .infobox img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            border: 1px solid #c8ccd1;
+        }
+
+        .infobox table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .infobox th {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #fff;
+            background-color: #eff1f3;
+            width: 40%;
+        }
+
+        .infobox td {
+            padding: 8px;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        /* Список особливостей */
+        .features-list {
+            background: #fdfdfd;
+            border-left: 5px solid #4285F4;
+            padding: 15px 20px 15px 40px;
+            margin: 20px 0;
+            list-style-type: circle;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #f4b400;
+            color: black;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 850px) {
+            .wiki-content { flex-direction: column-reverse; }
+            .infobox { width: 100%; float: none; margin: 0 0 20px 0; }
+            .main-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="wiki-nav">
+            <span>Матеріал з Вікіпедії — вільної енциклопедії.</span>
+        </div>
+        
+        <div class="wiki-header">
+            <h1>Тіто (собака)</h1>
+        </div>
+
+        <div class="wiki-content">
+            <div class="wiki-text">
+                <p><strong>Тіто</strong> — видатний представник безпородних собак, відомий своєю незалежністю, неповторним шармом та філософським ставленням до життя. На відміну від багатьох службових собак, Тіто обрав шлях вільного художника, ігноруючи систему дресирування та встановлені рамки.</p>
+                
+                <h2>Опис</h2>
+                <p>Тіто має унікальну зовнішність, яка поєднує в собі найкращі риси багатьох поколінь вільних предків. Він є живим доказом того, що для того, аби бути "найкращим хлопчиком", не обов'язково мати родовід чи диплом кінологічної школи. Його головна риса — чесність: він не робить вигляд, що слухається, якщо йому це не цікаво.</p>
+
+                <h2>Спосіб життя та "навички"</h2>
+                <p>Тіто свідомо відмовився від вивчення стандартних команд, вважаючи їх обмеженням особистої свободи. Замість цього він розвинув власну систему взаємодії зі світом:</p>
+                <ul class="features-list">
+                    <li><strong>Творче ігнорування</strong> — здатність дивитися крізь людину, коли вона каже "до мене".</li>
+                    <li><strong>Мистецтво відпочинку</strong> — Тіто може знайти найкомфортніше місце в домі швидше, ніж ви встигнете сказати "місце".</li>
+                    <li><strong>Харизматичний погляд</strong> — єдина "команда", яку він виконує бездоганно, щоб отримати смаколик без жодних зусиль.</li>
+                </ul>
+
+                <h2>Цікаві факти</h2>
+                <ul>
+                    <li>Тіто вважає, що команди — це для тих, кому бракує власної уяви.</li>
+                    <li>Має вроджений талант до розпізнавання звуку відкриття холодильника на відстані трьох кімнат.</li>
+                    <li>Його генетичний код настільки складний і багатий, що вчені досі не можуть зрозуміти, звідки в нього такі великі вуха (або такий великий талант до сну).</li>
+                </ul>
+            </div>
+
+            <div class="infobox">
+                <div class="infobox-title">Тіто</div>
+                <img src="Tito.jpg" alt="Фото Тіто">
+                <p style="text-align: center; font-size: 0.8em; color: #555; margin-top: 0;">Тіто під час роздумів про сенс життя</p>
+                <table>
+                    <tr>
+                        <th>Порода</th>
+                        <td>Безпородний (унікальний)</td>
+                    </tr>
+                    <tr>
+                        <th>Вид</th>
+                        <td>Собака свійський</td>
+                    </tr>
+                    <tr>
+                        <th>Навички</th>
+                        <td>Вільний від команд</td>
+                    </tr>
+                    <tr>
+                        <th>Статус</th>
+                        <td><span class="status-badge">Вільний духом</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
