@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вікіпедія: Тіто (собака)</title>
-    <meta name="description" content="Це енциклопедія про слухняного пса Смартика!">
-    <meta name="keywords" content="Смартик, Вікіпедія, енциклопедія, собака, пес.">
+    <title>Вікіпедія Тіто — Енциклопедія про собаку Тіто</title>
+    <meta name="description" content="Це енциклопедія про прикольного та милого песика Тіто!">
+    <meta name="keywords" content="Тіто, Вікіпедія, енциклопедія, собака, пес.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Основні налаштування */
@@ -66,8 +66,40 @@
             flex: 1;
             font-size: 16px;
         }
+        
+        /* Зміст */
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 15px 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            min-width: 250px;
+            border-radius: 2px;
+        }
+        .toc-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: 6px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #0645ad;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
 
-        /* Покращений інфобокс */
+        /* Інфобокс */
         .infobox {
             width: 300px;
             background-color: #f8f9fa;
@@ -107,7 +139,7 @@
             padding: 8px;
             border-bottom: 1px solid #fff;
             background-color: #eff1f3;
-            width: 40%;
+            width: 45%;
         }
 
         .infobox td {
@@ -115,27 +147,120 @@
             border-bottom: 1px solid #eaecf0;
         }
 
-        /* Список особливостей */
-        .features-list {
+        /* Список звичок */
+        .habits-list {
             background: #fdfdfd;
-            border-left: 5px solid #4285F4;
+            border-left: 5px solid #ffcc80;
             padding: 15px 20px 15px 40px;
             margin: 20px 0;
-            list-style-type: circle;
+            list-style-type: disc;
         }
 
-        .features-list li {
+        .habits-list li {
             margin-bottom: 8px;
         }
 
         .status-badge {
             display: inline-block;
-            background: #f4b400;
-            color: black;
+            background: #ffb74d;
+            color: white;
             padding: 2px 8px;
             border-radius: 12px;
             font-size: 0.9em;
             font-weight: bold;
+        }
+        
+        /* Аудіоплеєр */
+        .audio-section {
+            border: 1px solid #c8ccd1;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .audio-section audio {
+            height: 40px;
+        }
+
+        .color-circle {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #d7ccc8;
+            vertical-align: middle;
+            margin-left: 5px;
+            border: 1px solid #a2a9b1;
+        }
+
+        h2 {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 5px;
+            margin-top: 35px;
+            font-family: 'Linux Libertine', 'Georgia', serif;
+        }
+
+        /* --- Стилі гри (Для Тіто) --- */
+        #game-area {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(180deg, #fff9c4 0%, #ffffff 100%);
+            border: 2px solid #ffb74d;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 15px rgba(255, 183, 77, 0.2);
+        }
+
+        #game-canvas {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        #game-ui {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            pointer-events: none;
+            display: none;
+        }
+
+        #score-board {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ef6c00;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #start-btn {
+            padding: 18px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff9800, #ffc107);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(255, 152, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            z-index: 10;
+        }
+
+        #start-btn:hover { 
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
         }
 
         @media (max-width: 850px) {
@@ -149,7 +274,7 @@
 
     <div class="main-container">
         <div class="wiki-nav">
-            <span>Матеріал з Вікіпедії — вільної енциклопедії.</span>
+            <span>Матеріал з Вікіпедії — вільної енциклопедії про найкращих друзів.</span>
         </div>
         
         <div class="wiki-header">
@@ -158,47 +283,225 @@
 
         <div class="wiki-content">
             <div class="wiki-text">
-                <p><strong>Тіто</strong> — видатний представник безпородних собак, відомий своєю незалежністю, неповторним шармом та філософським ставленням до життя. На відміну від багатьох службових собак, Тіто обрав шлях вільного художника, ігноруючи систему дресирування та встановлені рамки.</p>
+                <p><strong>Тіто</strong> — видатний представник родини псових (лат. <i>Canis lupus familiaris</i>). Тіто є унікальним «дворянином» (безпородистим собакою), що робить його ексклюзивним у своєму роді. Попри відсутність родоводу довжиною в сувій, він володіє харизмою, якій позаздрили б чемпіони виставок. Тіто сповідує філософію вільної особистості: він принципово <strong>не знає жодної команди</strong>, оскільки вважає, що дресування обмежує його творчу натуру.</p>
                 
-                <h2>Опис</h2>
-                <p>Тіто має унікальну зовнішність, яка поєднує в собі найкращі риси багатьох поколінь вільних предків. Він є живим доказом того, що для того, аби бути "найкращим хлопчиком", не обов'язково мати родовід чи диплом кінологічної школи. Його головна риса — чесність: він не робить вигляд, що слухається, якщо йому це не цікаво.</p>
+                <div class="toc">
+                    <div class="toc-title">Зміст</div>
+                    <ul>
+                        <li><a href="#appearance">1 Особливості зовнішності</a></li>
+                        <li><a href="#character">2 Характер та вдача</a></li>
+                        <li><a href="#diet">3 Кулінарні пристрасті</a></li>
+                        <li><a href="#lifestyle">4 Спосіб життя</a></li>
+                        <li><a href="#game-section">5 Гра: Тіто та морозиво</a></li>
+                        <li><a href="#facts">6 Цікаві факти</a></li>
+                    </ul>
+                </div>
 
-                <h2>Спосіб життя та "навички"</h2>
-                <p>Тіто свідомо відмовився від вивчення стандартних команд, вважаючи їх обмеженням особистої свободи. Замість цього він розвинув власну систему взаємодії зі світом:</p>
-                <ul class="features-list">
-                    <li><strong>Творче ігнорування</strong> — здатність дивитися крізь людину, коли вона каже "до мене".</li>
-                    <li><strong>Мистецтво відпочинку</strong> — Тіто може знайти найкомфортніше місце в домі швидше, ніж ви встигнете сказати "місце".</li>
-                    <li><strong>Харизматичний погляд</strong> — єдина "команда", яку він виконує бездоганно, щоб отримати смаколик без жодних зусиль.</li>
+                <h2 id="appearance">Особливості зовнішності</h2>
+                <p>Тіто має неповторний вигляд, який не вписується в жодні стандарти кінологічних організацій. Його шерсть та очі випромінюють доброту, а хвіст перебуває в стані постійного руху, що свідчить про високий рівень щастя. Він є живим доказом того, що для того, аби бути красенем, не обов'язково мати породу.</p>
+
+                <h2 id="character">Характер та вдача</h2>
+                <p>Тіто характеризується як <strong>надзвичайно прикольний та милий песик</strong>. Його головна риса — абсолютна доброзичливість. Хоча він ігнорує «Дай лапу» чи «Поруч», він майстерно володіє технікою «заглядання в душу», особливо коли хтось поруч тримає щось смачне.</p>
+                
+                <div class="audio-section">
+                    <div>
+                        <strong>Голос Тіто:</strong><br>
+                        <span style="font-size: 0.9em; color: #54595d;">Звук радісного гавкання або сопіння.</span>
+                    </div>
+                    <audio controls preload="none">
+                        <source src="Sound.mp3" type="audio/mpeg">
+                        Ваш браузер не підтримує аудіоелемент HTML5.
+                    </audio>
+                </div>
+
+                <h2 id="diet">Кулінарні пристрасті</h2>
+                <p>Якщо в світі існує щось, заради чого Тіто готовий переглянути свої погляди на команди (але тільки на мить), то це <strong>морозиво</strong>. Це його найбільша слабкість і найбільша радість. Заради холодних ласощів Тіто готовий демонструвати дива швидкості та винахідливості.</p>
+                <ul class="habits-list">
+                    <li><strong>Морозиво</strong> — золотий стандарт раціону та причина для радості.</li>
+                    <li><strong>Свобода</strong> — свідомий вибір не вчити команди, щоб залишатися собою.</li>
                 </ul>
 
-                <h2>Цікаві факти</h2>
+                <h2 id="lifestyle">Спосіб життя</h2>
+                <p>Тіто веде життя професійного улюбленця. Його день складається з прогулянок, сну в найзручніших місцях та пошуку можливостей отримати порцію морозива. Він є головним джерелом позитиву в домі.</p>
+
+                <h2 id="game-section">Гра: Тіто ловить морозиво</h2>
+                <div id="game-area">
+                    <button id="start-btn">Дати морозиво Тіто</button>
+                    <div id="game-ui">
+                        <div id="score-board">З'їдено порцій: 0</div>
+                    </div>
+                    <canvas id="game-canvas"></canvas>
+                    <audio id="game-music" loop>
+                        <source src="Song.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <script>
+                    const canvas = document.getElementById('game-canvas');
+                    const ctx = canvas.getContext('2d');
+                    const startBtn = document.getElementById('start-btn');
+                    const gameUi = document.getElementById('game-ui');
+                    const scoreBoard = document.getElementById('score-board');
+                    const music = document.getElementById('game-music');
+
+                    let score = 0;
+                    let gameActive = false;
+                    let items = [];
+                    let tito = { x: 0, y: 0, w: 100, h: 100 };
+                    let animationId;
+
+                    const titoImg = new Image();
+                    titoImg.src = 'Тіто.png';
+
+                    const iceColors = ['#FFF9C4', '#F8BBD0', '#E1F5FE', '#FFCCBC'];
+
+                    function initGame() {
+                        canvas.style.display = 'block';
+                        gameUi.style.display = 'block';
+                        canvas.width = canvas.parentElement.clientWidth;
+                        canvas.height = canvas.parentElement.clientHeight;
+                        tito.x = canvas.width / 2 - tito.w / 2;
+                        tito.y = canvas.height - tito.h - 10;
+                        score = 0;
+                        items = [];
+                        gameActive = true;
+                        music.currentTime = 0;
+                        music.play();
+                        requestAnimationFrame(gameLoop);
+                    }
+
+                    function spawnItem() {
+                        if (Math.random() < 0.04) {
+                            items.push({
+                                x: Math.random() * (canvas.width - 30),
+                                y: -40,
+                                speed: 2.5 + (score / 10),
+                                color: iceColors[Math.floor(Math.random() * iceColors.length)]
+                            });
+                        }
+                    }
+
+                    function update() {
+                        spawnItem();
+                        items.forEach((item, index) => {
+                            item.y += item.speed;
+                            
+                            // Колізія
+                            if (item.y + 30 > tito.y && item.x + 30 > tito.x && item.x < tito.x + tito.w) {
+                                items.splice(index, 1);
+                                score++;
+                                scoreBoard.innerText = "З'їдено порцій: " + score;
+                            }
+
+                            if (item.y > canvas.height) {
+                                gameOver();
+                            }
+                        });
+                    }
+
+                    function draw() {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        
+                        // Малюємо Тіто
+                        ctx.drawImage(titoImg, tito.x, tito.y, tito.w, tito.h);
+
+                        // Малюємо кульки морозива
+                        items.forEach(item => {
+                            // Малюємо ріжок (трикутник)
+                            ctx.beginPath();
+                            ctx.moveTo(item.x + 5, item.y + 15);
+                            ctx.lineTo(item.x + 25, item.y + 15);
+                            ctx.lineTo(item.x + 15, item.y + 35);
+                            ctx.fillStyle = '#D7CCC8';
+                            ctx.fill();
+
+                            // Малюємо кульку
+                            ctx.beginPath();
+                            ctx.arc(item.x + 15, item.y + 12, 12, 0, Math.PI * 2);
+                            ctx.fillStyle = item.color;
+                            ctx.fill();
+                            ctx.strokeStyle = '#fff';
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        });
+                    }
+
+                    function gameLoop() {
+                        if (!gameActive) return;
+                        update();
+                        draw();
+                        animationId = requestAnimationFrame(gameLoop);
+                    }
+
+                    function gameOver() {
+                        gameActive = false;
+                        cancelAnimationFrame(animationId);
+                        music.pause();
+                        alert('Гра завершена! Тіто з’їв аж ' + score + ' порцій морозива!\nТепер він найщасливіший пес у світі!');
+                        canvas.style.display = 'none';
+                        gameUi.style.display = 'none';
+                        startBtn.style.display = 'block';
+                    }
+
+                    startBtn.addEventListener('click', () => {
+                        startBtn.style.display = 'none';
+                        initGame();
+                    });
+
+                    const handleMove = (e) => {
+                        if (!gameActive) return;
+                        let clientX = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
+                        let rect = canvas.getBoundingClientRect();
+                        let newX = clientX - rect.left - tito.w / 2;
+                        if (newX < 0) newX = 0;
+                        if (newX > canvas.width - tito.w) newX = canvas.width - tito.w;
+                        tito.x = newX;
+                    };
+
+                    canvas.parentElement.addEventListener('mousemove', handleMove);
+                    canvas.parentElement.addEventListener('touchmove', handleMove);
+                </script>
+
+                <h2 id="facts">Цікаві факти</h2>
                 <ul>
-                    <li>Тіто вважає, що команди — це для тих, кому бракує власної уяви.</li>
-                    <li>Має вроджений талант до розпізнавання звуку відкриття холодильника на відстані трьох кімнат.</li>
-                    <li>Його генетичний код настільки складний і багатий, що вчені досі не можуть зрозуміти, звідки в нього такі великі вуха (або такий великий талант до сну).</li>
+                    <li>Тіто — переконаний анархіст у світі кінології (не визнає команд).</li>
+                    <li>Він може визначити наявність морозива в радіусі кілометра лише за виразом обличчя господаря.</li>
+                    <li>Його порода офіційно називається «Найкраща у світі суміш усього доброго».</li>
+                    <li>Тіто вважає, що диван — це його законна територія, а люди — це гості.</li>
                 </ul>
             </div>
 
             <div class="infobox">
                 <div class="infobox-title">Тіто</div>
-                <img src="Tito.jpg" alt="Фото Тіто">
-                <p style="text-align: center; font-size: 0.8em; color: #555; margin-top: 0;">Тіто під час роздумів про сенс життя</p>
+                <img src="Тіто.png" alt="Фото собаки Тіто">
+                <p style="text-align: center; font-size: 0.8em; color: #555; margin-top: 0;">Тіто — експерт з дегустації морозива</p>
                 <table>
                     <tr>
                         <th>Порода</th>
-                        <td>Безпородний (унікальний)</td>
+                        <td>Безпородистий (унікальний)</td>
                     </tr>
                     <tr>
                         <th>Вид</th>
-                        <td>Собака свійський</td>
+                        <td>Пес свійський</td>
                     </tr>
                     <tr>
-                        <th>Навички</th>
-                        <td>Вільний від команд</td>
+                        <th>Вміння</th>
+                        <td>Ігнорування команд</td>
+                    </tr>
+                    <tr>
+                        <th>Характер</th>
+                        <td>Милий, дуже прикольний</td>
+                    </tr>
+                    <tr>
+                        <th>Улюблена їжа</th>
+                        <td>Морозиво 🍦</td>
+                    </tr>
+                    <tr>
+                        <th>Хобі</th>
+                        <td>Бути сонечком</td>
                     </tr>
                     <tr>
                         <th>Статус</th>
-                        <td><span class="status-badge">Вільний духом</span></td>
+                        <td><span class="status-badge">Душа компанії</span></td>
                     </tr>
                 </table>
             </div>
@@ -206,5 +509,4 @@
     </div>
 
 </body>
-
 </html>
